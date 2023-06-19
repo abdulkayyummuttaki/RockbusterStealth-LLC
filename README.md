@@ -323,6 +323,9 @@ Total sales by each country
 	ORDER BY amount desc
  
 ## Visualisations
+
+![Top 10 countries' total sales amount](Visualisations/Total geographical sales.png)
+
 + [Some of the visualisations in final presentation](./RockbusterSalesAnalysis.pdf)
 
 + [Public Tableau link](https://public.tableau.com/app/profile/muhammad.abdulkayyum.muttaki/viz/Exercise3_10_16796997564350/Customerpresenceacrossglobe)
