@@ -79,6 +79,7 @@ employers.
 • Joining tables
 • Subqueries
 • Common table expression(CTE)
+• Visualisation using Tableau
 
 
 
