@@ -130,8 +130,9 @@ data dump has loaded successfully.
 
 
 ### Actor			
-Total Number of Actors	SELECT COUNT(1) FROM ACTOR	
-200	
+Total Number of Actors	
+	SELECT COUNT(1) FROM ACTOR	
+`RESULT:200`	
 
 ### Countries			
 Total number of countries where Rockbuster customers are available	
