@@ -244,7 +244,7 @@ Total number of Gernre
 
 ## Some of the analytics queries to answer business questions
 
-Total sales by each country
+Total sales price by each film
 
 	WITH aggregate_customer_amount_cte AS
 	( 
