@@ -126,7 +126,7 @@ data dump has loaded successfully.
 • Creating presentations of findings using Excel.
 
 
-## Queries
+## Understanding the Dataset using basic PostgreSQL queries
 
 
 ### Actor			
