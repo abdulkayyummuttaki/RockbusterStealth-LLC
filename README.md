@@ -48,24 +48,24 @@ the ability to solve a variety of clients. The aim is to give hands-on experienc
 
 
 ## Data Set
-In this Achievement, you'll be using a data set that contains information about Rockbuster's
-film inventory, customers, and payments, among other things. The first thing you'll need to
-do is load the data set into the PostgreSQL database. Keep in mind the following points
-regarding the data set:
-● It's around 3MB and contains several files.
-● A relationship exists between two tables if a column name is present in both tables.
+	In this Achievement, you'll be using a data set that contains information about Rockbuster's
+	film inventory, customers, and payments, among other things. The first thing you'll need to
+	do is load the data set into the PostgreSQL database. Keep in mind the following points
+	regarding the data set:
+	● It's around 3MB and contains several files.
+	● A relationship exists between two tables if a column name is present in both tables.
 
 
 ## Final Analysis Criteria for the Project
 The final project will be evaluated on your ability to:
 
-● Write moderately complex SQL queries to answer business questions.
-● Present your SQL results to business managers by creating visualizations and telling
-a compelling story.
-● Present SQL results to technical colleagues using Excel and creating a
-data dictionary.
-● Create a professional project that can add to the portfolio and show to
-employers.
+	● Write moderately complex SQL queries to answer business questions.
+	● Present your SQL results to business managers by creating visualizations and telling
+	a compelling story.
+	● Present SQL results to technical colleagues using Excel and creating a
+	data dictionary.
+	● Create a professional project that can add to the portfolio and show to
+	employers.
 
 
 
@@ -84,47 +84,47 @@ employers.
 
 
 ## Uploading data dump to the PostgreSQL(version 2023) Database
-• Install PostgreSQL and configure the settings.
-• Create a database with the name Rockbuster.
-• Once the "Rockbuster" database has been created, it will appear in the list of databases 
-on the left-hand side of the screen. Right-click "Rockbuster" and select Restore:
-• A Restore dialogue will appear. Select the three small dots to the right of the Filename
-field to get the "Rockbuster.tar" file from "02 Data/Original Data".
-• Before you can find your "Rockbuster.tar" file, however, you'll need to click the Format 
-button in the bottom-right corner of the Select file dialogue and select All Files from the 
-dropdown menu to make all the files visible:
-• Select the “Rockbuster.tar” file, press OK, then click Restore.
-• Once you’ve found the “Rockbuster.tar” file and restored everything correctly, 
-you’ll see a window in the bottom-right corner of the screen confirming that the 
-data dump has loaded successfully.
+	• Install PostgreSQL and configure the settings.
+	• Create a database with the name Rockbuster.
+	• Once the "Rockbuster" database has been created, it will appear in the list of databases 
+	on the left-hand side of the screen. Right-click "Rockbuster" and select Restore:
+	• A Restore dialogue will appear. Select the three small dots to the right of the Filename
+	field to get the "Rockbuster.tar" file from "02 Data/Original Data".
+	• Before you can find your "Rockbuster.tar" file, however, you'll need to click the Format 
+	button in the bottom-right corner of the Select file dialogue and select All Files from the 
+	dropdown menu to make all the files visible:
+	• Select the “Rockbuster.tar” file, press OK, then click Restore.
+	• Once you’ve found the “Rockbuster.tar” file and restored everything correctly, 
+	you’ll see a window in the bottom-right corner of the screen confirming that the 
+	data dump has loaded successfully.
 
 ## Approach to the problem
 
 #### 1. Understanding the data
 
-• Extracting entity relationship diagram and creating a first draft of a data dictionary.
-• Answer some basic business questions using SQL.
-• Creating EDA using SQL ordering, limiting, and grouping data
-• Extracting entity relationship diagram and creating a first draft of a data dictionary.
-• Answer some basic business questions using SQL.
-• Creating EDA using SQL ordering, limiting, and grouping data
+	• Extracting entity relationship diagram and creating a first draft of a data dictionary.
+	• Answer some basic business questions using SQL.
+	• Creating EDA using SQL ordering, limiting, and grouping data
+	• Extracting entity relationship diagram and creating a first draft of a data dictionary.
+	• Answer some basic business questions using SQL.
+	• Creating EDA using SQL ordering, limiting, and grouping data
 
 #### 2. Data Cleaning deriving more columns
    
-   • Identifying and namely duplicate, non-uniform, incorrect, and missing data and cleaning the data using a view
-   • Preparing data for analysis by profiling and cleaning the data.
-   • Deriving more additional columns using SQL group clause.
+	• Identifying and namely duplicate, non-uniform, incorrect, and missing data and cleaning the data using a view
+	• Preparing data for analysis by profiling and cleaning the data.
+	• Deriving more additional columns using SQL group clause.
 
 #### 3.Preparing for the business queries
-• Creating a flat file for analysis using join queries.
-• Writing subqueries to answer complex business questions
-• Using CTE to create complex queries. 
-• Evaluate the query performance and understand the DPA model.
+	• Creating a flat file for analysis using join queries.
+	• Writing subqueries to answer complex business questions
+	• Using CTE to create complex queries. 
+	• Evaluate the query performance and understand the DPA model.
 
 #### 4. Storytelling
-• Using flat data sheets from analytics queries upload to the tableau.
-• Preparing visualisations using Tableau.
-• Creating presentations of findings using Excel.
+	• Using flat data sheets from analytics queries upload to the tableau.
+	• Preparing visualisations using Tableau.
+	• Creating presentations of findings using Excel.
 
 
 ## Understanding the Dataset using basic PostgreSQL queries
