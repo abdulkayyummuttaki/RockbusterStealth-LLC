@@ -115,52 +115,92 @@ Total Number of Actors	SELECT COUNT(1) FROM ACTOR
 200	
 
 ### Countries			
-Total number of countries where rockbuster customer are available	
+Total number of countries where Rockbuster customer are available	
 
-"WITH aggregate_customer_amount_cte (customer_id, first_name, last_name, city, country, amount ) AS
+"WITH aggregate_customer_amount_cte (customer_id, first_name, last_name, city, country, amount ) 
+AS
+
 ( 
+
 	SELECT customer.customer_id, 
-		   first_name, 
-		   last_name, 
-	       city, 
+ 
+	       first_name, 
+  
+	       last_name, 
+  
+	       City, 
+	
 	       country, 
+	
 	       SUM(amount) as amount
-	FROM Customer										   
+	
+	FROM Customer			
+ 
 	INNER JOIN payment USING (customer_id)
+ 
 	INNER JOIN address USING (address_id )
+ 
 	INNER JOIN city USING (city_id)
+ 
 	INNER JOIN country USING (country_id)
-	GROUP BY customer.customer_id,first_name,last_name, 
-	       city,country
+ 
+	GROUP BY customer.customer_id,
+                 first_name,
+		 last_name, 
+   
+	          city,
+	          country
+	   
 )
 
+
 SELECT  COUNT( DISTINCT country ) FROM aggregate_customer_amount_cte;"	
+
 
 RESULT:
 108	
 
+
 Total number of active customer countries	
 
-"WITH aggregate_customer_amount_cte (customer_id, first_name, last_name, city, country, amount ) AS
+"WITH aggregate_customer_amount_cte (customer_id, first_name, last_name, city, country, amount )
+AS
 ( 
 	SELECT customer.customer_id, 
-		   first_name, 
-		   last_name, 
+ 
+	       first_name,
+	
+	       last_name, 
+	
 	       city, 
+	
 	       country, 
+	
 	       SUM(amount) as amount,
-		   activebool as status
-	FROM Customer										   
+	
+	       activebool as status
+	
+	FROM Customer	
+ 
 	INNER JOIN payment USING (customer_id)
+ 
 	INNER JOIN address USING (address_id )
+ 
 	INNER JOIN city USING (city_id)
+ 
 	INNER JOIN country USING (country_id)
-	GROUP BY customer.customer_id,first_name,last_name, 
-	       city,country
+ 
+	GROUP BY customer.customer_id,
+                 first_name,
+		 last_name, 
+   
+	          city,
+	          country
+	   
 )
 
-SELECT  COUNT( DISTINCT country ) FROM aggregate_customer_amount_cte
-WHERE status IS true"	
+
+SELECT  COUNT( DISTINCT country ) FROM aggregate_customer_amount_cte WHERE status IS true"	
 
 RESULT: 108	
 
