@@ -71,15 +71,15 @@ employers.
 
 ## Tools/Skills/Procedure
 
-• Relational database: PostgreSQL
-• SQL
-• Database querying using ERD
-• Filtering
-• Cleaning and summarising the data
-• Joining tables
-• Subqueries
-• Common table expression(CTE)
-• Visualisation using Tableau
+	• Relational database: PostgreSQL
+	• SQL
+	• Database querying using ERD
+	• Filtering
+	• Cleaning and summarising the data
+	• Joining tables
+	• Subqueries
+	• Common table expression(CTE)
+	• Visualisation using Tableau
 
 
 
