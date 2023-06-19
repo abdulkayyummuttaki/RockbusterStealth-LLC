@@ -223,8 +223,7 @@ Average replacement cost
 			
 	SELECT rating, COUNT(rating) FROM film GROUP BY rating ORDER BY CASE WHEN rating = 'G' THEN 'A' WHEN rating = 'PG' THEN 'B' WHEN rating = 'PG-13' THEN 'C' WHEN rating = 'R' THEN 'D' ELSE 'E' END"	
 
- RESULT:
- 
+	RESULT:
 	rating	 count
 	G	178
  	PG	194
