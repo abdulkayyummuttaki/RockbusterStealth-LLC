@@ -237,14 +237,14 @@ Total number of film genre
 	SELECT Count(distinct name) FROM film_category INNER JOIN category USING (category_id)"
 `RESULT: 17`	
 
-Total number of Gernre	
++Total number of Gernre	
 
 	SELECT COUNT(name) FROM category
 `RESULT:20`	
 
 ## Some of the analytics queries to answer business questions
 
-Top 100 films title that made the least sales.
++ Top 100 films title that made the least sales.
 
 	WITH aggregate_customer_amount_cte AS
 	( 
@@ -283,7 +283,7 @@ Top 100 films title that made the least sales.
 
 
 
-Total sales by each country
++ Total sales by each country
 
 	WITH aggregate_customer_amount_cte AS
 	( 
@@ -320,4 +320,4 @@ Total sales by each country
 	ORDER BY amount desc
  
 ## Visulisations
-[Some of the visualisations](./RockbusterSalesAnalysis.pdf)
+[Some of the visualisations in final presentation](./RockbusterSalesAnalysis.pdf)
