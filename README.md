@@ -135,187 +135,85 @@ Total Number of Actors	SELECT COUNT(1) FROM ACTOR
 
 ### Countries			
 Total number of countries where Rockbuster customers are available	
-
-
-	`SELECT COUNT(name) FROM category WITH aggregate_customer_amount_cte (customer_id, first_name, last_name, city, country, amount ) AS ( SELECT customer.customer_id, first_name, last_name, City, country, SUM(amount) as amount FROM Customer INNER JOIN payment USING (customer_id) INNER JOIN address USING (address_id ) INNER JOIN city USING (city_id) INNER JOIN country USING (country_id) GROUP BY customer.customer_id, first_name, last_name, city, country ) SELECT COUNT( DISTINCT country )  FROM aggregate_customer_amount_cte;`
+	SELECT COUNT(name) FROM category WITH aggregate_customer_amount_cte (customer_id, first_name, last_name, city, country, amount ) AS ( SELECT customer.customer_id, first_name, last_name, City, country, SUM(amount) as amount FROM Customer INNER JOIN payment USING (customer_id) INNER JOIN address USING (address_id ) INNER JOIN city USING (city_id) INNER JOIN country USING (country_id) GROUP BY customer.customer_id, first_name, last_name, city, country ) SELECT COUNT( DISTINCT country )  FROM aggregate_customer_amount_cte;
 	
 `RESULT:
 108`	
 
 
 Total number of active customer countries	
+	WITH aggregate_customer_amount_cte (customer_id, first_name, last_name, city, country, amount ) AS ( SELECT customer.customer_id, first_name, last_name, city, country, SUM(amount) as amount, activebool as status FROM Customer INNER JOIN payment USING (customer_id) INNER JOIN address USING (address_id ) INNER JOIN city USING (city_id) INNER JOIN country USING (country_id) GROUP BY customer.customer_id, first_name, last_name, city, country ) SELECT  COUNT( DISTINCT country ) FROM aggregate_customer_amount_cte WHERE status IS true"	
 
-"WITH aggregate_customer_amount_cte (customer_id, first_name, last_name, city, country, amount )
-AS
-( 
-	SELECT customer.customer_id, 
- 
-	       first_name,
-	
-	       last_name, 
-	
-	       city, 
-	
-	       country, 
-	
-	       SUM(amount) as amount,
-	
-	       activebool as status
-	
-	FROM Customer	
- 
-	INNER JOIN payment USING (customer_id)
- 
-	INNER JOIN address USING (address_id )
- 
-	INNER JOIN city USING (city_id)
- 
-	INNER JOIN country USING (country_id)
- 
-	GROUP BY customer.customer_id,
-                 first_name,
-		 last_name, 
-   
-	          city,
-	          country
-	   
-)
+`RESULT: 108`	
 
 
-SELECT  COUNT( DISTINCT country ) FROM aggregate_customer_amount_cte WHERE status IS true"	
+Total number of non-active customer countries	
+	WITH aggregate_customer_amount_cte (customer_id, first_name, last_name, city, country, amount ) AS ( SELECT customer.customer_id, first_name, last_name, city, country, SUM(amount) as amount, activebool as status FROM Customer INNER JOIN payment USING (customer_id) INNER JOIN address USING (address_id ) INNER JOIN city USING (city_id) INNER JOIN country USING (country_id) GROUP BY customer.customer_id,first_name,last_name, city, country ) SELECT  COUNT( DISTINCT country ) FROM aggregate_customer_amount_cte WHERE status IS false	
 
-RESULT: 108	
+`RESULT:  0`	
 
+Total Number of cities where Rockbuster customer presence exists	
+	WITH aggregate_customer_amount_cte (customer_id, first_name, last_name, city, country, amount ) AS ( SELECT customer.customer_id, first_name, last_name, city, country, SUM(amount) as amount, activebool as status FROM Customer INNER JOIN payment USING (customer_id) INNER JOIN address USING (address_id ) INNER JOIN city USING (city_id) INNER JOIN country USING (country_id) GROUP BY customer.customer_id,first_name,last_name, city, country ) SELECT  COUNT( DISTINCT city ) FROM aggregate_customer_amount_cte"	
 
-Total number of non active customer countries	"WITH aggregate_customer_amount_cte (customer_id, first_name, last_name, city, country, amount ) AS
-( 
-	SELECT customer.customer_id, 
-		   first_name, 
-		   last_name, 
-	       city, 
-	       country, 
-	       SUM(amount) as amount,
-		   activebool as status
-	FROM Customer										   
-	INNER JOIN payment USING (customer_id)
-	INNER JOIN address USING (address_id )
-	INNER JOIN city USING (city_id)
-	INNER JOIN country USING (country_id)
-	GROUP BY customer.customer_id,first_name,last_name, 
-	       city,country
-)
-
-SELECT  COUNT( DISTINCT country ) FROM aggregate_customer_amount_cte
-WHERE status IS false"	0	
-Total Number of cities where Rockbuster customer presence exist	"WITH aggregate_customer_amount_cte (customer_id, first_name, last_name, city, country, amount ) AS
-( 
-	SELECT customer.customer_id, 
-		   first_name, 
-		   last_name, 
-	       city, 
-	       country, 
-	       SUM(amount) as amount,
-		   activebool as status
-	FROM Customer										   
-	INNER JOIN payment USING (customer_id)
-	INNER JOIN address USING (address_id )
-	INNER JOIN city USING (city_id)
-	INNER JOIN country USING (country_id)
-	GROUP BY customer.customer_id,first_name,last_name, 
-	       city,country
-)
-
-SELECT  COUNT( DISTINCT city ) FROM aggregate_customer_amount_cte"	
-
-RESULT:
-597	
+`RESULT: 597`	
 
 
 ### Customer			
 Total number of customers	
 
-"WITH aggregate_customer_amount_cte (customer_id, first_name, last_name, city, country, amount ) AS
-( 
-	SELECT customer.customer_id, 
-		   first_name, 
-		   last_name, 
-	       city, 
-	       country, 
-	       SUM(amount) as amount,
-		   activebool as status
-	FROM Customer										   
-	INNER JOIN payment USING (customer_id)
-	INNER JOIN address USING (address_id )
-	INNER JOIN city USING (city_id)
-	INNER JOIN country USING (country_id)
-	GROUP BY customer.customer_id,first_name,last_name, 
-	       city,country
-)
+	WITH aggregate_customer_amount_cte (customer_id, first_name, last_name, city, country, amount ) AS ( SELECT customer.customer_id, first_name, last_name, city, country, SUM(amount) as amount, activebool as status FROM Customer INNER JOIN payment USING (customer_id) INNER JOIN address USING (address_id )INNER JOIN city USING (city_id) INNER JOIN country USING (country_id) GROUP BY customer.customer_id,first_name,last_name,  city, country ) SELECT  COUNT( customer_id ) FROM aggregate_customer_amount_cte
 
-SELECT  COUNT( customer_id ) FROM aggregate_customer_amount_cte
-
-RESULT:
-599	
+`RESULT: 599`	
 
 ### Films			
 Total number of films	
-
-SELECT count(film_id) FROM film	
-
-RESULT:1000	
-Average rental duration	SELECT Round(AVG(rental_duration),2) FROM film	
-RESULT: 4.99	
-Max rental duration	SELECT Round(MAX(rental_duration),2) FROM film	
-RESULT: 7	
-Min rental duration	SELECT Round(MIN(rental_duration),2) FROM film	
-RESULT: 3	
-MIN rental rate	SELECT Round(MIN(rental_rate),2) FROM film	
-RESULT: 0.99	
-MAX rental rate	SELECT Round(MAX(rental_rate),2) FROM film	
-RESULT: 4.99	
-Average  rental rate	SELECT Round(AVG(rental_rate),2) FROM film	
-RESULT: 2.98	
-Minimum replacement cost	SELECT Round(MIN(replacement_cost),2) FROM film	
-RESULT: 9.99	
-Maximum replacement cost	SELECT Round(MAX(replacement_cost),2) FROM film	
-RESULT: 29.99	
-Average replacement cost	SELECT Round(AVG(replacement_cost),2) FROM film	
-RESULT: 19.98	
+	SELECT count(film_id) FROM film	
+`RESULT:1000`	
+Average rental duration	
+	SELECT Round(AVG(rental_duration),2) FROM film	
+`RESULT: 4.99`	
+Max rental duration
+	SELECT Round(MAX(rental_duration),2) FROM film	
+`RESULT: 7`	
+Min rental duration
+	SELECT Round(MIN(rental_duration),2) FROM film	
+`RESULT: 3`	
+MIN rental rate	
+	SELECT Round(MIN(rental_rate),2) FROM film	
+`RESULT: 0.99`	
+MAX rental rate	
+	SELECT Round(MAX(rental_rate),2) FROM film	
+`RESULT: 4.99`	
+Average  rental rate	
+	SELECT Round(AVG(rental_rate),2) FROM film	
+`RESULT: 2.98`	
+Minimum replacement cost
+	SELECT Round(MIN(replacement_cost),2) FROM film	
+`RESULT: 9.99	`
+Maximum replacement cost
+	SELECT Round(MAX(replacement_cost),2) FROM film	
+`RESULT: 29.99	`
+Average replacement cost
+	SELECT Round(AVG(replacement_cost),2) FROM film	
+`RESULT: 19.98	`
 			
-SELECT rating, COUNT(rating) 
-FROM film GROUP BY rating 
-ORDER BY CASE 
-		WHEN rating = 'G' THEN 'A' 
-		WHEN rating = 'PG' THEN 'B' 
-		WHEN rating = 'PG-13' THEN 'C' 
-		WHEN rating = 'R' THEN 'D' 
-		ELSE 'E' 
-	END"	
+SELECT rating, COUNT(rating) FROM film GROUP BY rating ORDER BY CASE WHEN rating = 'G' THEN 'A' WHEN rating = 'PG' THEN 'B' WHEN rating = 'PG-13' THEN 'C' WHEN rating = 'R' THEN 'D' ELSE 'E' END"	
 
  RESULT:
- rating	 count
- 
-		G	178
-  
-		PG	194
-  
-		PG-13	223
-
-		R	195
-  
-		NC-17	210
+	rating	 count
+	G	178
+ 	PG	194
+  	PG-13	223
+   	R	195
+	NC-17	210
   
 			
 Total number of film genre	
-"SELECT Count(distinct name) 
-FROM film_category
-INNER JOIN category USING (category_id)"
-
-RESULT: 17	
+	SELECT Count(distinct name) FROM film_category INNER JOIN category USING (category_id)"
+`RESULT: 17`	
 
 Total number of Gernre	
-SELECT COUNT(name) FROM category
-
-RESULT: 	20	
+	SELECT COUNT(name) FROM category
+`RESULT:20`	
 
 
