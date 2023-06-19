@@ -329,4 +329,4 @@ Total sales by each country
 
 ## Storytelling
 + [Presentation](./RockbusterSalesAnalysis.pdf)
-+ [Portfolio]([./RockbusterSalesAnalysis.pdf](https://muttakimak.wixsite.com/my-site/copy-of-preparing-for-the-flu-season)https://muttakimak.wixsite.com/my-site/copy-of-preparing-for-the-flu-season)
++ [Portfolio](https://muttakimak.wixsite.com/my-site/copy-of-preparing-for-the-flu-season)
