@@ -281,5 +281,43 @@ Top 100 films title that made the least sales.
 	ORDER BY SUM(amount) 
 	LIMIT 100
 
+
+
+Total sales by each country
+
+	WITH aggregate_customer_amount_cte AS
+	( 
+		SELECT customer.customer_id AS customer_id, 
+		       rental_id,
+		       film.title,
+		       film.release_year,
+		       film.rating,
+		       film.rental_duration,
+		       film.rental_rate,
+		       film.length,
+		       category.name,
+		       city.city, 
+		       country.country,
+		       customer.create_date,
+		       payment.amount, 
+		       payment.payment_date
+		FROM payment
+		INNER JOIN customer USING (customer_id)
+		INNER JOIN rental USING (rental_id)
+		INNER JOIN inventory USING (inventory_id)
+		INNER JOIN film USING (film_id)
+		INNER JOIN film_category USING (film_id)
+		INNER JOIN category USING (category_id)
+		INNER JOIN address USING (address_id)
+		INNER JOIN city USING (city_id)
+		INNER JOIN country USING (country_id)
+	)
+	
+	
+	SELECT country, SUM(amount) as amount
+	FROM aggregate_customer_amount_cte
+	group by country 
+	ORDER BY amount desc
+ 
 ## Visulisations
 [Some of the visualisations](./RockbusterSalesAnalysis.pdf)
