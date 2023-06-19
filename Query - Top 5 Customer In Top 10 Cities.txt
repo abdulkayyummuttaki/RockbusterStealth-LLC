@@ -1,0 +1,77 @@
+Find out how many of the top 5 customers are based within each 
+country.
+Your final output should include 3 columns:
+• “country”
+• “all_customer_count” with the total number of customers in each 
+country
+• “top_customer_count” showing how many of the top 5 customers live 
+in each country
+
+
+
+
+WITH aggregate_customer_amount_cte (customer_id, first_name, last_name, city, country, amount 
+) 
+AS
+	( 
+	  SELECT customer.customer_id, 
+	         first_name, 
+	         last_name, 
+ 		 city, 
+ 		 country, 
+ 		 SUM(amount) as amount
+	  FROM Customer
+	  INNER JOIN payment USING (customer_id)
+	  INNER JOIN address USING (address_id )
+ 	  INNER JOIN city USING (city_id)
+	  INNER JOIN country USING (country_id)
+	  GROUP BY customer.customer_id,first_name,last_name, 
+ 	  city,country
+	),
+
+cities_ranking_cte AS
+	( 
+	  SELECT city,
+ 	  RANK() OVER ( ORDER BY SUM(amount) DESC ) as city_ranking
+  	  FROM aggregate_customer_amount_cte
+	  GROUP BY city
+	), 
+
+customer_ranking AS 
+	(
+	SELECT customer_id, 
+		city, 
+		country,
+		first_name, 
+ 		last_name, 
+		amount,
+		RANK() OVER 
+			( PARTITION BY country, 
+					city
+			  ORDER BY amount DESC ) 
+        	AS top_customer
+	FROM aggregate_customer_amount_cte
+	INNER JOIN cities_ranking_cte USING (city)
+	WHERE city_ranking < 11
+	),
+
+top_10_cities_top_5_customer 
+   AS ( 
+	SELECT customer_id, 
+		city, 
+		country, 
+		first_name, 
+		last_name, 
+		amount 
+	FROM customer_ranking 
+	WHERE top_customer < 6
+	ORDER BY amount DESC, country, city
+	)
+
+SELECT aggregate_customer_amount_cte.country, 
+	count(aggregate_customer_amount_cte.customer_id) as all_customer_count, 
+	count(top_10_cities_top_5_customer.customer_id) as top_customer_count
+FROM aggregate_customer_amount_cte
+LEFT JOIN top_10_cities_top_5_customer using (customer_id)
+GROUP BY 1
+ORDER BY top_customer_count DESC
