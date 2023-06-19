@@ -352,6 +352,23 @@ Total sales by each country
 
 + [Public Tableau link](https://public.tableau.com/app/profile/muhammad.abdulkayyum.muttaki/viz/Exercise3_10_16796997564350/Customerpresenceacrossglobe)
 
+## Conclusion
+
+	• Analysis of film data
+		+ Sports, sci-fi and animation are the top genres that made the 
+		  highest films sales 
+		+ Travel, Music and Thriller are the least purchased movies 
+		+ The top 3 movies are Telegraph Voyage, Zorro Ark, Wife Turn 
+		+ Most negligible revenue-generated films are Texas Watch, 
+		  Oklahoma Jumanji, Duffe
+	• Rockbuster customer base in
+		+ India, China and US are the top 3 countries 
+		+ Total number 108 countries where Rockbuster customers are 
+		   present.
+	• Variation in global sales
+		+ Maximum sales by country is 6034.78, and minimum sale is 
+		  47.85. Average sales from all the countries are 567,00
+
 ## Storytelling
 + [Presentation](./RockbusterSalesAnalysis.pdf)
 + [Portfolio](https://muttakimak.wixsite.com/my-site/copy-of-preparing-for-the-flu-season)
