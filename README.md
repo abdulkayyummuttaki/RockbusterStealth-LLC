@@ -99,23 +99,42 @@ data dump has loaded successfully.
 
 ## Approach to the problem
 
-1. Understanding the data
+#### 1. Understanding the data
 
 • Extracting entity relationship diagram and creating a first draft of a data dictionary.
-
 • Answer some basic business questions using SQL.
-
 • Creating EDA using SQL ordering, limiting, and grouping data
 • Extracting entity relationship diagram and creating a first draft of a data dictionary.
 • Answer some basic business questions using SQL.
 • Creating EDA using SQL ordering, limiting, and grouping data
+
+#### 2. Data Cleaning deriving more columns
+   
+   • Identifying and namely duplicate, non-uniform, incorrect, and missing data and cleaning the data using a view
+   • Preparing data for analysis by profiling and cleaning the data.
+   • Deriving more additional columns using SQL group clause.
+
+#### 3.Preparing for the business queries
+• Creating a flat file for analysis using join queries.
+• Writing subqueries to answer complex business questions
+• Using CTE to create complex queries. 
+• Evaluate the query performance and understand the DPA model.
+
+#### 4. Storytelling
+• Using flat data sheets from analytics queries upload to the tableau.
+• Preparing visualisations using Tableau.
+• Creating presentations of findings using Excel.
+
+
+## Queries
+
 
 ### Actor			
 Total Number of Actors	SELECT COUNT(1) FROM ACTOR	
 200	
 
 ### Countries			
-Total number of countries where Rockbuster customer are available	
+Total number of countries where Rockbuster customers are available	
 
 "WITH aggregate_customer_amount_cte (customer_id, first_name, last_name, city, country, amount ) 
 AS
