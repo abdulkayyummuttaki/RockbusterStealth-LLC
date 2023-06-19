@@ -242,5 +242,44 @@ Total number of Gernre
 	SELECT COUNT(name) FROM category
 `RESULT:20`	
 
+## Some of the analytics queries to answer business questions
+
+Total sales by each country
+
+	WITH aggregate_customer_amount_cte AS
+	( 
+		SELECT customer.customer_id AS customer_id, 
+			rental_id,
+			film.title,
+			film.release_year,
+			film.rating,
+			film.rental_duration,
+			film.rental_rate,
+			film.length,
+			category.name,
+		        city.city, 
+		        country.country,
+			customer.create_date,
+		        payment.amount, 
+			payment.payment_date
+		FROM payment
+		INNER JOIN customer USING (customer_id)
+		INNER JOIN rental USING (rental_id)
+		INNER JOIN inventory USING (inventory_id)
+		INNER JOIN film USING (film_id)
+		INNER JOIN film_category USING (film_id)
+		INNER JOIN category USING (category_id)
+		INNER JOIN address USING (address_id)
+		INNER JOIN city USING (city_id)
+		INNER JOIN country USING (country_id)
+	)
+	
+	SELECT title, 
+	       SUM(amount)  
+	FROM aggregate_customer_amount_cte
+	GROUP BY title
+	ORDER BY SUM(amount) 
+	LIMIT 100
+
 ## Visulisations
 [Some of the visualisations](./RockbusterSalesAnalysis.pdf)
