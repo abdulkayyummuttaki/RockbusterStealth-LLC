@@ -244,7 +244,7 @@ Total number of Gernre
 
 ## Some of the analytics queries to answer business questions
 
-Total sales price by each film
+Top 100 films title that made the least sales.
 
 	WITH aggregate_customer_amount_cte AS
 	( 
