@@ -245,6 +245,7 @@ Total number of film genre
 ## Some of the analytics queries to answer business questions
 
 + Top 100 films title that made the least sales.
+  
 
 	WITH aggregate_customer_amount_cte AS
 	( 
@@ -284,6 +285,7 @@ Total number of film genre
 
 
 + Total sales by each country
+  
 
 	WITH aggregate_customer_amount_cte AS
 	( 
