@@ -242,4 +242,5 @@ Total number of Gernre
 	SELECT COUNT(name) FROM category
 `RESULT:20`	
 
-
+## Visulisations
+[Some of the visualisations](./RockbusterSalesAnalysis.pdf)
