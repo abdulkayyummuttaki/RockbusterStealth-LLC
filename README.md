@@ -324,7 +324,7 @@ Total sales by each country
  
 ## Visualisations
 
-![Top 10 countries' total sales amount](Visualisations/Total geographical sales.png)
+![Top 10 countries' total sales amount](https://github.com/abdulkayyummuttaki/RockbusterStealth-LLC/blob/main/Visualisations/Total%20geographical%20sales.png)
 
 + [Some of the visualisations in final presentation](./RockbusterSalesAnalysis.pdf)
 
