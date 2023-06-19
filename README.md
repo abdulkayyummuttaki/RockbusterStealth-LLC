@@ -137,7 +137,7 @@ Total Number of Actors	SELECT COUNT(1) FROM ACTOR
 Total number of countries where Rockbuster customers are available	
 
 
-`SELECT COUNT(name) \ FROM category WITH aggregate_customer_amount_cte (customer_id, first_name, last_name, city, country, amount ) \ AS ( \SELECT customer.customer_id, first_name, last_name, City, country, SUM(amount) as amount \FROM Customer INNER JOIN payment USING (customer_id) \ INNER JOIN address \ USING (address_id ) \ INNER JOIN city USING (city_id) \ INNER JOIN country USING (country_id) \ GROUP BY customer.customer_id, \ first_name, \ last_name, \ city, \ country ) \ SELECT COUNT( DISTINCT country ) \ FROM aggregate_customer_amount_cte;`
+`SELECT COUNT(name) FROM category WITH aggregate_customer_amount_cte (customer_id, first_name, last_name, city, country, amount ) AS ( SELECT customer.customer_id, first_name, last_name, City, country, SUM(amount) as amount FROM Customer INNER JOIN payment USING (customer_id) INNER JOIN address USING (address_id ) INNER JOIN city USING (city_id) INNER JOIN country USING (country_id) GROUP BY customer.customer_id, first_name, last_name, city, country ) SELECT COUNT( DISTINCT country )  FROM aggregate_customer_amount_cte;`
 	
 `RESULT:
 108`	
