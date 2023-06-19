@@ -324,27 +324,27 @@ Total sales by each country
  
 ## Visualisations
 
-![Top 10 countries' total sales amount](https://github.com/abdulkayyummuttaki/RockbusterStealth-LLC/blob/main/Visualisations/Total%20geographical%20sales.png)
+![image 1](https://github.com/abdulkayyummuttaki/RockbusterStealth-LLC/blob/main/Visualisations/Total%20geographical%20sales.png)
 
-![Top 10 countries' total sales amount](https://github.com/abdulkayyummuttaki/RockbusterStealth-LLC/blob/main/Visualisations/Total%20geographical%20sales.png)
-
-
-![Top 10 countries' total sales amount](https://github.com/abdulkayyummuttaki/RockbusterStealth-LLC/blob/main/Visualisations/Total%20geographical%20sales.png)
+![image 2](https://github.com/abdulkayyummuttaki/RockbusterStealth-LLC/blob/main/Visualisations/Total%20geographical%20sales.png)
 
 
-![Top 10 countries' total sales amount](https://github.com/abdulkayyummuttaki/RockbusterStealth-LLC/blob/main/Visualisations/Box%26WhiskerChart%20SalesByRating.png)
+![image 3](https://github.com/abdulkayyummuttaki/RockbusterStealth-LLC/blob/main/Visualisations/Total%20geographical%20sales.png)
 
 
-![Top 10 countries' total sales amount](https://github.com/abdulkayyummuttaki/RockbusterStealth-LLC/blob/main/Visualisations/Correlation_Sales%26Countries.png)
+![image 4](https://github.com/abdulkayyummuttaki/RockbusterStealth-LLC/blob/main/Visualisations/Box%26WhiskerChart%20SalesByRating.png)
 
 
-![Top 10 countries' total sales amount](https://github.com/abdulkayyummuttaki/RockbusterStealth-LLC/blob/main/Visualisations/CustomerPresenceInCountries.png)
+![image 5](https://github.com/abdulkayyummuttaki/RockbusterStealth-LLC/blob/main/Visualisations/Correlation_Sales%26Countries.png)
 
 
-![Top 10 countries' total sales amount](https://github.com/abdulkayyummuttaki/RockbusterStealth-LLC/blob/main/Visualisations/Dashboard_GeographicalPresence.png)
+![image 6](https://github.com/abdulkayyummuttaki/RockbusterStealth-LLC/blob/main/Visualisations/CustomerPresenceInCountries.png)
 
 
-![Top 10 countries' total sales amount](https://github.com/abdulkayyummuttaki/RockbusterStealth-LLC/blob/main/Visualisations/VerticalBarChart_FilmGenre.png)
+![image 7](https://github.com/abdulkayyummuttaki/RockbusterStealth-LLC/blob/main/Visualisations/Dashboard_GeographicalPresence.png)
+
+
+![image 8](https://github.com/abdulkayyummuttaki/RockbusterStealth-LLC/blob/main/Visualisations/VerticalBarChart_FilmGenre.png)
 
 
 
