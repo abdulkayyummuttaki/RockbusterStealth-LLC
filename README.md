@@ -136,8 +136,8 @@ Total Number of Actors	SELECT COUNT(1) FROM ACTOR
 ### Countries			
 Total number of countries where Rockbuster customers are available	
 
-`
-SELECT COUNT(name) FROM category
+
+`SELECT COUNT(name) FROM category
 WITH aggregate_customer_amount_cte (customer_id, first_name, last_name, city, country, amount ) 
 AS
 ( 
@@ -161,8 +161,8 @@ AS
 )
 SELECT  
 COUNT( DISTINCT country ) 
-FROM aggregate_customer_amount_cte;
-`	
+FROM aggregate_customer_amount_cte;`
+	
 `RESULT:
 108`	
 
