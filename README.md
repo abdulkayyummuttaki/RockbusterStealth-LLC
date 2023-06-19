@@ -323,5 +323,6 @@ Total sales by each country
 	ORDER BY amount desc
  
 ## Visualisations
-[Some of the visualisations in final presentation](./RockbusterSalesAnalysis.pdf)
-[Public Tableau link](https://public.tableau.com/app/profile/muhammad.abdulkayyum.muttaki/viz/Exercise3_10_16796997564350/Customerpresenceacrossglobe)
++ [Some of the visualisations in final presentation](./RockbusterSalesAnalysis.pdf)
+
++ [Public Tableau link](https://public.tableau.com/app/profile/muhammad.abdulkayyum.muttaki/viz/Exercise3_10_16796997564350/Customerpresenceacrossglobe)
