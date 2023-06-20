@@ -326,10 +326,10 @@ Total sales by each country
 
 ![image 1](https://github.com/abdulkayyummuttaki/RockbusterStealth-LLC/blob/main/Visualisations/Total%20geographical%20sales.png)
 
-![image 2](https://github.com/abdulkayyummuttaki/RockbusterStealth-LLC/blob/main/Visualisations/Total%20geographical%20sales.png)
+![image 2](https://github.com/abdulkayyummuttaki/RockbusterStealth-LLC/blob/main/Visualisations/VerticalBarChart_FilmGenre.png)
 
 
-![image 3](https://github.com/abdulkayyummuttaki/RockbusterStealth-LLC/blob/main/Visualisations/Total%20geographical%20sales.png)
+![image 3](https://github.com/abdulkayyummuttaki/RockbusterStealth-LLC/blob/main/Visualisations/Dashboard_GloablSalesInfo.png)
 
 
 ![image 4](https://github.com/abdulkayyummuttaki/RockbusterStealth-LLC/blob/main/Visualisations/Box%26WhiskerChart%20SalesByRating.png)
